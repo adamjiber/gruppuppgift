@@ -1,0 +1,70 @@
+body {
+  font-family: 'Sono', sans-serif;
+  color: rgba(1,156,149,255);
+  background-image: url(../inlämningsuppgift/images/matkultur.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 1rem;
+}
+
+.pricing-plan {
+  flex-grow: 1;
+  max-width: 300px;
+  padding: 5px;
+  background-color: rgba(1,45,43,255);
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.plan-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.food-type{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.food-topic{
+  font-size: 20px;
+  font-family:'Courier New', Courier, monospace;
+  color: white;
+}
+
+.plan-features li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1250px) {
+  .pricing-container {
+    flex-direction: column;
+    height: 100%;
+  }
+}
