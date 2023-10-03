@@ -1,7 +1,7 @@
 body {
   font-family: 'Sono', sans-serif;
   color: rgba(1,156,149,255);
-  background-image: url(../inlämningsuppgift/images/matkultur.jpg);
+  background-image: url(./matkultur.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
