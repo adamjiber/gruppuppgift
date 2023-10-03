@@ -1,10 +1,11 @@
 body {
-  background-image: url(gottochblandat.png);
+  background-image: url(gottochblandat.png); /*bakgrundsbild*/
   background-size: cover;
   background-attachment: fixed;
+  
 }
 
-a {
+a {/*Styling av mina länkar*/
   color: white;
   font-size: x-large;
   margin: 10px;
@@ -12,49 +13,31 @@ a {
   
 }
 
-a:hover {
-  color: rgb(8, 218, 255);
+a:hover {/*Ändrar färg vid hovring över länkar*/
+  color: rgba(1,45,43,255);
 }
 
-.meny {
-  text-align: right;
+.meny{ /*Position, typsnitt osv för mina länkar i menyn*/
+  display: inline;
+  position: absolute;
+  right: 10px;
+  font-size: small;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
 }
 
 li {
   list-style-type: none;
+  display: inline;
 }
 
-@media only screen and (max-width: 600px) {
-.meny {
-  display: inline-block;
-}
-body {
-  background-position: center;
-}
-
-a {
-  font-size: smaller;
-  text-align: center;
-}
-}
-
-@media only screen and (max-width: 1080px) {
-  .meny {
-    display: inline-block;
-  }
-  body {
-    background-position: center;
-  }
-  a {
-    font-size: small;
-    text-align: center;
-  }
-
-  }
 img {
   width: 200px;
+  height: 300px;
   opacity: 0.9;
+  border-radius: 10px;
   
+ 
 }
 
 img:hover {
@@ -71,10 +54,131 @@ img:hover {
   gap: 20px;
   transition: .3 ease;
   
+  
 }
 
 .container {
-  display: inline-flex;
-  gap: 870px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 25vh;
+  padding: 25px;
+  
 }
+.header {
+  display: flex;
+  color: white;
+  font-size: medium;
+  font-family: cursive;
+  background-color: rgba(1,156,149,255);
+  opacity: 0.9;
+  width: 100%;
+  
+  
+}
+h1 {
+  margin-left: 40px;
+  
+}
+@media only screen and (max-width: 600px) {
+  .meny {
+    display: none; /* Göm den befintliga menyn */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Sätt högre z-index för att hamna ovanpå innehållet */
+  }
+  .meny a {
+    display: block; /* Visa länkarna i menyn som blockelement */
+    color: white;
+    padding: 5px 10px; /* Lägg till lite utrymme runt länkarna */
+    text-align: left;
+    font-size: large;
+  }
+  
+  h1 {
+    font-size: small;
+  }
+  
+  body {
+    background-position: center;
+    font-size: small;
+    background-attachment: fixed;
+    
+  }
+  
+  a {
+    font-size: smaller;
+    text-align: center;
+  }
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: small;
+    position: sticky;
+    top: 0;
+    opacity: 0.9;
+    z-index: 2;
+    }
+  
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    margin-top: 300px;
+  }
+  img {
+    width: 150px; 
+    height: 200px;
+    opacity: 0.9;
+    margin: 10px; /* Lägg till avstånd mellan bilderna */
+  }
+  
+  
+  }
+  
+  @media only screen and (max-width: 1080px) {
+    .meny {
+      display: grid;
+      
+    }
+    body {
+      background-position: center;
+      font-size: small;
+      overflow-x: hidden;
+      background-attachment: fixed;
+      
+      
+    }
+    a {
+      font-size: small;
+      text-align: center;
+    }
+    
+    .header {
+      display: grid;
+      width: 100%;
+      font-size: small;
+    }
+    h1 {
+      font-size: medium;
+      margin-right: 20px;
+      
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+    }
+    img {
+      margin: 10px;
+    }
+    }
