@@ -104,7 +104,7 @@ h1 {
   h1 {
     font-size: small;/*Minska rubrikens storlek för mobiler*/
   }
-  /*Bakgrundsposition, textstorlek för mobil */
+  /*Bakgrundsposition, textstorlek för mobil*/
   body {
     background-position: center;
     font-size: small;
