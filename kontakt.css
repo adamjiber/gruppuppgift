@@ -1,47 +1,61 @@
 body{
-    background-color:rgba(1,45,43,255)
+    background-color:rgba(1,45,43,255);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .container{
     display: grid;
+    /* två kolummner */
     grid-template-columns: 1fr 1fr;
+    /* Avståndet mellan rader och och kolumner*/
     grid-gap: 20px;
-    align-items: center;
     padding: 20px;
+
+}
+
+h3 {
+    /* lite avstånd ovanför h3 elementet*/
+    margin-top: 50px;
 }
 
 .leftside{
-    padding: 20px;
+    padding: 50px;
+    /* bredden*/
     width: 85%;
     max-width: 600px;
     color: white;
+
 }
 
 .kontaktaoss{
     width: 85%;
     max-width: 600px;
     background: white;
+    /* Här lägger jag in detta då jag ska kunna lägga elementet exka där jag vill och då har jag lagt in top samt right*/
     position: absolute;
     padding: 30px 40px;
+    /* Här ville jag inkludera innehåll, padding och border när den räknas*/
     box-sizing: border-box;
     border-radius: 8px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     top: 50%;
     right: 2%;
     transform: translate(0, -50%);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
+    
 
 }
-
+/* 5px tomt under elementet*/
 h3 {
-    margin-bottom: -5px;
+    margin-bottom: 5px;
 }
-
+/* Minskar avståndet från toppen på alla p elemet*/
 p {
     margin-top: -5px;
 }
-
+/* normal typsnitt*/
 .stil{
     font-weight: normal;
 }
@@ -78,12 +92,59 @@ margin-top: 0;
 }
 
 input[type="submit"]{
-    background-color: aqua;
+    background-color: rgba(1,156,149,255);
     padding: 15px 30px;
+    /* Lägger den på vänster sida av kontaktformuläret*/
     float: left;
+    /* Gör den fetstil*/
     font-weight: bold;
+    /* Tar bort den synliga kanten runt knappen*/
     border: none;
    
+}
+.karta {
+    margin-top: 20px;
+}
+
+
+/*Responsiv*/
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Göra grid till en enda kolumn */
+        grid-gap: 10px; /*Avstånd mellan divarna*/
+    }
+
+    .kontaktaoss {
+        width: 100%;/*Gör bredden 100% för att ta upp hela skärmbredden*/
+        position: static; /*Återställ positionen till normal för att inte överlappa andra element*/
+    }
+
+    .text input,
+    .text textarea {
+        padding: 10px; /*Göra om padding för textinmatningsfälten*/
+    }
+}
+/*För mindre skärmar*/
+@media screen and (max-width: 600px) {
+    .container, .kontaktaoss, .karta {
+        width: 100%; /* Bredden är 100% så att de tar upp hela bredden av sitt överordnade element */
+        padding: 10px; /*Lägg till padding för utrymme mellan dem */
+        margin-bottom: 10px;
+        display: block; /*Ändra till blocklayout för att placera dem ovanför varandra */
+    }
+    .kontaktaoss {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: none;
+        width: 100%; /* Lägger bredden till 100% för att ta upp hela bredden av sitt överordnade element */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .karta {
+        margin-top: 10px; /*La till lite marginal över kartan*/
+    }
 }
 
 
