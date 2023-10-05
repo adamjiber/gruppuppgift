@@ -3,6 +3,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   
+  
 }
 
 a {/*Styling av mina länkar*/
@@ -25,12 +26,12 @@ a:hover {/*Ändrar färg vid hovring över länkar*/
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
 }
-
+/*styling för li-element*/
 li {
   list-style-type: none;
   display: inline;
 }
-
+/*styling, storlek samt "genomskinlighet" för mina bilder*/
 img {
   width: 200px;
   height: 300px;
@@ -39,16 +40,17 @@ img {
   
  
 }
-
+/*bilden blir större vid hovring*/
 img:hover {
   transform: scale(1.1);
 }
+/*Styling och position för min vänstra container*/
 .left-container {
   display: flex;
   gap: 20px;
   transition: .3 ease;
 }
-
+/*Styling och position för min högra container*/
 .right-container {
  display: flex;
   gap: 20px;
@@ -56,7 +58,7 @@ img:hover {
   
   
 }
-
+/*Styling, position osv för hela containern*/
 .container {
   display: flex;
   align-items: center;
@@ -65,6 +67,7 @@ img:hover {
   padding: 25px;
   
 }
+/*Styling och position för min header*/
 .header {
   display: flex;
   color: white;
@@ -73,57 +76,59 @@ img:hover {
   background-color: rgba(1,156,149,255);
   opacity: 0.9;
   width: 100%;
-  
-  
 }
+
+/*Position för min rubrik*/
 h1 {
   margin-left: 40px;
   
 }
+/*Media queries för mobilskärm*/
 @media only screen and (max-width: 600px) {
   .meny {
-    display: none; /* Göm den befintliga menyn */
+    display: none; /*Göm den befintliga menyn*/
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1; /* Sätt högre z-index för att hamna ovanpå innehållet */
+    z-index: 1; /*Sätt högre z-index för att hamna ovanpå innehållet*/
   }
   .meny a {
-    display: block; /* Visa länkarna i menyn som blockelement */
+    display: block; /*Visa länkarna i menyn som blockelement*/
     color: white;
-    padding: 5px 10px; /* Lägg till lite utrymme runt länkarna */
+    padding: 5px 10px; /*Lägg till lite utrymme runt länkarna*/
     text-align: left;
     font-size: large;
   }
-  
+   /*Anpassningar för textstorlek och layout*/
   h1 {
-    font-size: small;
+    font-size: small;/*Minska rubrikens storlek för mobiler*/
   }
-  
+  /*Bakgrundsposition, textstorlek för mobil */
   body {
     background-position: center;
     font-size: small;
     background-attachment: fixed;
     
   }
-  
+  /*Ändrar textstorlek för mobil*/
   a {
     font-size: smaller;
     text-align: center;
   }
+  /*Styling, position, textstorlek för min header*/
   .header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end;/*Placerar flex-element längst till höger*/
     width: 100%;
     font-size: small;
-    position: sticky;
+    position: sticky;/*Gör så att min header stannar på plats även om man scrollar neråt*/
     top: 0;
-    opacity: 0.9;
+    opacity: 0.9;/*gör headern lite genomskinlig*/
     z-index: 2;
     }
   
-  
+  /*Styling, position för min container*/
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -132,6 +137,7 @@ h1 {
     height: fit-content;
     margin-top: 300px;
   }
+  /*Styling, storlek för mina bilder*/
   img {
     width: 150px; 
     height: 200px;
@@ -141,7 +147,7 @@ h1 {
   
   
   }
-  
+  /*Anpassning för skärmar med största storlek 1080px*/
   @media only screen and (max-width: 1080px) {
     .meny {
       display: grid;
