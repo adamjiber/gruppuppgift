@@ -6,19 +6,18 @@ padding: 100px;
 
 }
 .container {
-    padding: 100px;
-    background-color:rgba(1,45,43,255); 
-    background-size: auto;
-    opacity: 0.7;
+  padding: 100px;
+  background-color:rgba(1,45,43,255); 
+  background-size: auto;
+  opacity: 0.7;
     
 }
 .innehåll {
   border: 1px red;
 }
  #omossp{
-    
-        line-height: 2;
-        font-weight: bold;
+    line-height: 2;
+    font-weight: bold;
 
   }
   img {
@@ -36,11 +35,6 @@ padding: 100px;
 /* Styling for ipad */
 @media only screen and (max-width: 992px) {
 
-
-
-
-    
-
 }
 /* /styling for mobile */
 @media only screen and (max-width: 768px) {
@@ -49,12 +43,4 @@ padding: 100px;
     padding: 5px;
     width: 100%;
 }
-
-  
-
 }
-
-
-
-  
-  
