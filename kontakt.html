@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakts oss</title>
+    <!--Här länkar jag till css-->
+    <link rel="stylesheet" href="kontakt.css">
+</head>
+<body>
+    <!--Här skapar jag en behållare-->
+    <div class="container">
+        <!--Detta är vänsterspalt till min webbsida-->
+        <div class="leftside">
+            <!--Rubrik-->
+            <h1>Kontakt</h1>
+            <!--Lite text-->
+            <p>Om ni har några frågor kan ni ställa de i kontaktformuläret, det går även bra att ringa eller e-posta på nedanstående uppgifter.</p>
+            <h3>Gott & Blandat</h3>
+            <p>Isafjordsgatan 30a <br>
+            164 40 Kista</p>
+            <h3>E-post:</h3>
+            <p>info@gottblandat.se</p>
+            <h3>Telefonnummer: <span class= "stil">08-7484846</span></h3>
+            <!--karta över vägbeskrivning-->
+            <iframe class="karta" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.6540438510565!2d17.946398077337946!3d59.40548420492235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9eed2f41ec5f%3A0x212bd3d80316105f!2sIsafjordsgatan%2030A%2C%20164%2040%20Kista!5e0!3m2!1ssv!2sse!4v1696332136275!5m2!1ssv!2sse" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+
+
+        </div>
+    </div>
+    <!--Här skapar jag en kontaktformulär-->
+    <div class="kontaktaoss">
+        <!--Här ger jag den rubruken en titel också så att jag ska kunna styla den-->
+        <div class="titel">
+            <h1>Kontakta oss</h1>
+            <div class="text">
+                <label for="namn"> Ditt namn :</label>
+                <input type="text" name="namn" id="namn" value="" placeholder="Skriv ditt namn här"><!--Här lägger jag in en grå text i textfältet som förvinner när man ska skriva nåt-->
+        </div>
+        </div>
+        <div class="text">
+            <label for="email"> Din e-post :</label>
+            <input type="email" name="email"  id="email" value="" placeholder="Skriv din e-postadress här">
+    </div>
+    <div class="text">
+        <label for="meddelande">Ditt meddelande :</label>
+        <textarea id="meddelande" placeholder="Skriv ditt meddelande här"></textarea>
+</div>
+</div>
+<!--Här skapar jag en knapp-->
+<div class="knapp">
+    <input id="submit-btn" type="submit" value="Skicka">
+    
+</div>
+<!--Javaacript med värde från input och meddelande som dyker upp-->
+<script>
+document.getElementById("submit-btn").addEventListener("click", function () {
+
+    var namn=document.getElementById("namn").value;
+alert("Tack, " +namn+"! Ditt meddelande har skickats.");  
+
+});
+
+</script>
+
+</body>
+</html>
