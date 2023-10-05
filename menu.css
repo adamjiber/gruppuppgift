@@ -1,0 +1,77 @@
+body { /* utför stil för hela hemsidan, från font till backgroundsbild */
+  font-family: 'Sono', sans-serif;
+  color: rgba(1,156,149,255);
+  background-image: url(./matkultur.jpg);
+  background-size: cover; /* Anpassar så att bakgrundsbilden är rätt storlek för elementen */
+  background-position: center;
+  background-attachment: fixed; /* Denna fäster bakgrundsbilden vid fönstret */
+}
+
+h1{ /* Storlek, färg och position för rubriken. */
+  display: flex; 
+  justify-content: center; /* justify centrera texten horisontellt*/
+  align-items: center; /* align centrerar veritkalt */
+  font-size: 50px;
+  color: white;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Vyhöjden är 100% */
+  gap: 1rem; /* gap används för mellanrum mellan elementen och 1rem är lika med font size av html:n(16px) */
+}
+
+.pricing-plan { /* Stil för varje prisplan, i detta fall de 4 prisplanerna. */
+  flex-grow: 1; /*  */
+  max-width: 300px;
+  padding: 5px;
+  background-color: rgba(1,45,43,255);
+  border-radius: 5px; /* gör hörnen lite mer runda*/
+  text-align: center;
+  transition: .3s ease;
+}
+
+.pricing-plan:hover{
+  transform: scale(1.15); /* Förstoringseffekt när man hover vid menyn */
+}
+
+
+.plan-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white
+}
+
+.plan-features {
+  list-style: none; /* Tar bort punkterna från list */
+  padding: 0; /* ingen utfyllnad */
+  margin: 0; /* ingen marginal */
+}
+
+/* stilar för mattyp */
+.food-type{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+/* Stilar för matämne */
+.food-topic{
+  font-size: 20px;
+  font-family:'Courier New', Courier, monospace;
+  color: white;
+}
+
+.plan-features li {
+  margin-bottom: 10px; /* Avstånd från botten av elemeneten. */
+}
+
+@media (max-width: 1250px) { /* denna element anpassar skärmstorleken */
+  .pricing-container {
+    flex-direction: column;
+    height: 100%;
+  }
+}
